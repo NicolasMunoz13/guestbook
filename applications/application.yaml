@@ -14,7 +14,7 @@ spec:
     namespace: default
   syncWindows:
   - applications:
-    - guestbook
+      - guestbook
     duration: 24h
     kind: deny
     schedule: '* * * * *'
