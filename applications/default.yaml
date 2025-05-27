@@ -12,11 +12,11 @@ spec:
       server: '*'
   sourceRepos:
     - '*'
-  syncWindows:
-    - applications:
-        - guestbook
-      kind: deny
-      schedule: "* * * * *"
-      duration: 24h
-      timeZone: America/Bogota
+  #syncWindows:
+  #  - applications:
+  #      - guestbook
+  #    kind: deny
+  #    schedule: "* * * * *"
+  #    duration: 24h
+  #    timeZone: America/Bogota
   
