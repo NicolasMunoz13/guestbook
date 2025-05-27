@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: default
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - namespace: '*'
+      server: '*'
+  sourceRepos:
+    - '*'
+  syncWindows:
+    - applications:
+        - guestbook
+      kind: deny
+      schedule: "* * * * *"  # Deny syncs at 2 AM UTC daily
+      duration: 24h
+      timeZone: America/Bogota
+  
