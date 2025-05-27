@@ -12,3 +12,10 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
+  syncWindows:
+  - applications:
+    - guestbook
+    duration: 24h
+    kind: deny
+    schedule: '* * * * *'
+    timeZone: America/Bogota
